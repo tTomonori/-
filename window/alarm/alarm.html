@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Alarm</title>
+	<link rel="stylesheet" href="../../script/components/components.css">
+	<link rel="stylesheet" href="../../script/components/button.css">
+	<link rel="stylesheet" href="../../script/components/programDetails.css">
+	<link rel="stylesheet" href="../../script/components/eventDetails.css">
+	<link rel="stylesheet" href="../../script/components/planBar.css">
+	<link rel="stylesheet" href="../../script/components/alarm.css">
+	<link rel="stylesheet" href="./alarm.css">
+</head>
+<script>
+const renderer=require("electron").ipcRenderer
+</script>
+<body>
+	<div id="alarmPanel">
+		<div class="closeButton" onclick="closeAlarm()"></div>
+		<div class="alarmContent">
+			<div class="plan"></div>
+			<div class="remarkContainer">
+			<div class="remark"></div>
+			</div>
+			<div class="time"><span class="hour">00</span>時&nbsp<span class="minute">00</span>分</div>
+		</div>
+	</div>
+<iframe id="componentsFrame" src="../../script/components/components.html" style="display:none;"></iframe>
+</body>
+<!-- 予定関連 -->
+<script type="text/javascript">
+const Program=require("../../script/plan/Program.js")
+const Event=require("../../script/plan/Event.js")
+const AlarmCreater=require("../../script/alarm/AlarmCreater.js")
+</script>
+<script type="text/javascript" src="../../script/MyDate.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="../../script/getFromMain.js"></script>
+<!-- ポップアップ -->
+<script type="text/javascript" src="../../script/popup/PopupWindow.js"></script>
+<script type="text/javascript" src="../../script/popup/PlanDetails.js"></script>
+<script type="text/javascript" src="../../script/popup/ProgramDetails.js"></script>
+
+<script type="text/javascript" src="./alarm.js"></script>
+<script type="text/javascript">
+var gWindowNum
+function closeAlarm(){
+	renderer.send("closeAlarm",{windowNum:gWindowNum})
+}
+onLoad(()=>{
+	console.log("ここから始まる");
+
+})
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Components</title>
+	<link rel="stylesheet" href="./components.css">
+	<link rel="stylesheet" href="./button.css">
+	<link rel="stylesheet" href="./programDetails.css">
+	<link rel="stylesheet" href="./eventDetails.css">
+	<link rel="stylesheet" href="./planBar.css">
+	<link rel="stylesheet" href="./alarm.css">
+	<link rel="stylesheet" href="./alart.css">
+	<style media="screen">
+		body > *{
+			position: relative !important;
+		}
+	</style>
+</head>
+<body>
+	<!-- ボタン -->
+	<div class="usagiButton buttonX"></div>
+	<div class="usagiButton buttonO"></div>
+	<div class="usagiButton buttonG"></div>
+	<div class="garbageButton"></div>
+	<!-- 予定詳細 -->
+	<div class="popupWindow programDetails">
+		<div class="garbageButton"></div>
+		<div class="popupDashed"></div>
+		<div class="programForm">
+		<input class="textFeild" placeholder="予定" type="text" name="name" value="" pattern=".{1,}" required><br>
+		<input class="textFeild" placeholder="2000" type="number" min="2000" max="3000" name="year" value="" maxlength="4" style="width:4ch;">年
+		<input class="textFeild" placeholder="1" type="number" min="1" max="12" name="month" value="" maxlength="2" style="width:2ch;">月
+		<input class="textFeild" placeholder="1" type="number" min="1" max="31" name="date" value="" maxlength="2" style="width:2ch;">日
+		<input class="textFeild" placeholder="0" type="number" min="0" name="period" value="" maxlength="4" style="width:4ch;">日間&nbsp
+		<br>
+		<input class="textFeild" placeholder="0" type="number" min="0" name="notice" value="" maxlength="4" style="width:4ch;">日前から通知<br>
+		&nbsp&nbsp期日後保持<input class="checkbox" type="checkbox" name="retention" value=""><br>
+		アラーム&nbsp&nbsp On<input class="checkbox" type="checkbox" name="alarmOn" value="">
+		<div class="alarmFeild" style="height:100px;">
+			<div class="usagiButton buttonG" name="newAlarmButton" style="width:30px;height:30px;margin-bottom:-5px;margin-top:2px"></div>
+		</div>
+		<textarea class="textFeild" placeholder="備考" type="text" name="remark" value="" style="width:100%;height:3em;" rows="2"></textarea>
+		</div>
+		<div class="usagiButton buttonX" style="width:50px;height:50px;"></div>
+		<div class="" style="width:calc(100% - 111px);height:1px;display:inline-block;"></div>
+		<div class="usagiButton buttonO" style="width:50px;height:50px;"></div>
+	</div>
+	<!-- 予定バー -->
+	<div class="programBar usagiBlue"><span class="month">月</span>月&nbsp<span class="day">日</span>日&nbsp&nbsp<span class="plan">予定</span></div>
+	<div class="programBar usagiPink"><span class="month">月</span>月&nbsp<span class="day">日</span>日&nbsp&nbsp<span class="plan">予定</span></div>
+	<!-- イベント詳細 -->
+	<div class="popupWindow eventDetails">
+		<div class="popupDashed"></div>
+		<div class="garbageButton"></div>
+		<input class="textFeild" placeholder="イベント" type="text" name="name" value="" pattern=".{1,}" required><br>
+		アラーム&nbsp&nbsp On<input class="checkbox" type="checkbox" name="alarmOn" value="">
+		<div class="alarmFeild" style="height:130px;">
+			<div class="usagiButton buttonG" name="newAlarmButton" style="width:30px;height:30px;margin-bottom:-5px;margin-top:2px"></div>
+		</div>
+		<textarea class="textFeild" placeholder="備考" type="text" name="remark" value="" style="width:100%;height:3em;" rows="2"></textarea>
+		<div class="usagiButton buttonX" style="width:50px;height:50px;"></div>
+		<div class="" style="width:calc(100% - 111px);height:1px;display:inline-block;"></div>
+		<div class="usagiButton buttonO" style="width:50px;height:50px;"></div>
+	</div>
+	<!-- イベントバー -->
+	<div class="eventBar usagiBlue"><span class="plan">イベント</span></div>
+	<div class="eventBar usagiPink"><span class="plan">イベント</span></div>
+	<!-- アラームバー -->
+	<div class="alarmBar">
+		<select class="" name="alarmType">
+		<option value="parDate">毎日</option><option value="parWeek">毎週</option><option value="onTime">指定時間</option>
+		</select>
+		<div class="parDateOption alarmOption">
+			<input class="textFeild" placeholder="0" type="number" min="0" max="23" name="hour" value="" maxlength="2" style="width:2ch;">時
+			<input class="textFeild" placeholder="0" type="number" min="0" max="59" name="minute" value="" maxlength="2" style="width:2ch;">分
+		</div>
+		<div class="parWeekOption alarmOption">
+			<select class="" name="dayOfWeek">
+				<option value="0">日</option><option value="1">月</option><option value="2">火</option><option value="3">水</option>
+				<option value="4">木</option><option value="5">金</option><option value="6">土</option>
+			</select>曜日
+			<input class="textFeild" placeholder="0" type="number" min="0" max="23" name="hour" value="" maxlength="2" style="width:2ch;">時
+			<input class="textFeild" placeholder="0" type="number" min="0" max="59" name="minute" value="" maxlength="2" style="width:2ch;">分
+		</div>
+		<div class="onTimeOption alarmOption">
+			<input class="textFeild" placeholder="2000" type="number" min="2000" max="3000" name="year" value="" maxlength="4" style="width:4ch;">年
+			<input class="textFeild" placeholder="1" type="number" min="1" max="12" name="month" value="" maxlength="2" style="width:2ch;">月
+			<input class="textFeild" placeholder="1" type="number" min="1" max="31" name="date" value="" maxlength="2" style="width:2ch;">日
+			<input class="textFeild" placeholder="0" type="number" min="0" max="23" name="hour" value="" maxlength="2" style="width:2ch;">時
+			<input class="textFeild" placeholder="0" type="number" min="0" max="59" name="minute" value="" maxlength="2" style="width:2ch;">分
+		</div>
+		<div class="garbageButton" style="width:19px;height:24px;"></div>
+	</div>
+	<!-- alart -->
+	<div class="popupWindow alartWindow">
+		<div class="popupDashed"></div>
+			<div class="alartText">警告文</div>
+			<div class="buttons">
+			<div class="usagiButton buttonX"></div>
+			<div class="usagiButton buttonO"></div>
+			</div>
+	</div>
+	<!-- notice -->
+	<div class="programBar unicornPurple noticeBar bar1"><span class="today">当日</span>&nbsp&nbsp<span class="plan">予定</span></div>
+	<div class="programBar usagiPink noticeBar bar2">あと<span class="notice">0</span>日&nbsp<span class="month">月</span>月&nbsp<span class="day">日</span>日&nbsp&nbsp<span class="plan">予定</span></div>
+	<div class="programBar usagiBlue noticeBar bar3">あと<span class="notice">0</span>日&nbsp<span class="month">月</span>月&nbsp<span class="day">日</span>日&nbsp&nbsp<span class="plan">予定</span></div>
+</body>
+<script type="text/javascript">
+function getComponent(aClassName){
+	return document.getElementsByClassName(aClassName)[0].cloneNode(true)
+}
+</script>
+</html>

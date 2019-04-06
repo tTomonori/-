@@ -1,0 +1,32 @@
+.alartWindow{
+	border: solid 2px #ccf;
+	background: -webkit-gradient(linear, left top, right bottom, from(rgba(234,234,255,1)),to(rgba(224,224,255,1)));
+	width: 310px;
+	height: 180px;
+}
+.alartWindow .popupDashed{
+	border: dashed 3px #bbe;
+}
+.alartText{
+	/* text-align: center; */
+	font-size: 30px;
+	margin: 0px;
+}
+.buttons{
+	position: absolute;
+	bottom: 20px;
+	width: 70%;
+	left: 15%;
+	height: 50px;
+}
+.buttons .usagiButton{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+.buttons .buttonO{
+	left: 0;
+}
+.buttons .buttonX{
+	right: 0;
+}

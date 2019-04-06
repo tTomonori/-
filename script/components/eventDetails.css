@@ -1,0 +1,16 @@
+.eventDetails{
+	border: solid 2px rgb(250,210,210);
+	background: -webkit-gradient(linear, left top, right bottom, from(rgba(255,230,230,1)),to(rgba(255,225,225,1)));
+	width: 310px;
+	height: 320px;
+}
+.eventDetails .popupDashed{
+	border: dashed 3px rgb(245,190,190);
+}
+.eventDetails > .garbageButton{
+	position: absolute;
+	width: 32px;
+	height: 40px;
+	top:15px;
+	right: 20px;
+}

@@ -1,0 +1,51 @@
+*{user-select: none;}
+
+.usagiBlue{
+	background: rgb(210,250,240)
+}
+.usagiBlue::before{
+	background:url('../../image/myImage/usamimiBlue.png') no-repeat;
+	background-size:contain;
+}
+.usagiPink{
+	background: rgb(255,230,230);
+}
+.usagiPink::before{
+	background:url('../../image/myImage/usamimiPink.png') no-repeat;
+	background-size:contain;
+}
+.unicornPurple{
+	background: #ccf;
+}
+.unicornPurple::before{
+	background:url('../../image/myImage/unicornPurple.png') no-repeat;
+	background-size:contain;
+}
+
+.popupWindow{
+	position: absolute;
+	/* border: solid 2px #ccf; */
+	border-radius: 40px;
+	padding: 40px;
+	padding-bottom: 10px;
+	display: inline-block;
+	/* background: -webkit-gradient(linear, left top, right bottom, from(rgba(234,234,255,1)),to(rgba(224,224,255,1))); */
+	box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+	/* width: 310px; */
+	/* height: 180px; */
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.popupWindow .popupDashed{
+	position: absolute;
+	/* border: dashed 3px #bbe; */
+	border-radius: 38px;
+	width: calc(100% - 14px);
+	height: calc(100% - 14px);
+	top: 4px;
+	left: 4px;
+	pointer-events: none;
+}

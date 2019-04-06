@@ -1,0 +1,84 @@
+.programBar{
+	border-radius: 5px;
+	margin: 5px 0px;
+	margin-left: 24px;
+	padding-left: 2ch;
+	position: relative;
+	transition: all 500ms 50ms ease;
+	cursor: pointer;
+}
+.programBar:hover{
+	margin-left: 12px;
+}
+.programBar::before{
+	content:"";
+	display:inline-block;
+	position: absolute;
+	width:24px;
+	height:24px;
+	transform: rotateZ(-90deg);
+	top: 0;
+	left: 0;
+	margin-left: -22px;
+}
+.eventBar{
+	border-radius: 5px;
+	margin: 5px 0px;
+	margin-left: 12px;
+	padding-left: 2ch;
+	width: calc(100% - 36px - 2ch);
+	position: relative;
+	transition: all 500ms 50ms ease;
+	cursor: pointer;
+}
+.eventBar:hover{
+	margin-left: 24px;
+}
+.eventBar::before{
+	content:"";
+	display:inline-block;
+	position: absolute;
+	width:24px;
+	height:24px;
+	transform: rotateZ(90deg);
+	top: 0;
+	right: 0;
+	margin-right: -22px;
+}
+
+.noticeBar{
+	width: 110%;
+	margin-left: 80px;
+	font-size: 12px;
+}
+.noticeBar .plan{
+	font-size: 15px;
+}
+.noticeBar:hover{
+	margin-left: 50px;
+}
+.bar1{
+	margin-left: 65px;
+}
+.bar1 .plan{
+	font-size: 25px;
+}
+.bar1 .notice{
+	font-size: 20px;
+}
+.bar1::before{
+	width: 38px;
+	height: 38px;
+	margin-left: -36px;
+}
+.bar1 .today{
+	font-size: 17px;
+}
+.bar2 .notice{
+	color: #f00;
+	font-size: 15px;
+}
+.bar3 .notice{
+	color: #00f;
+	font-size: 15px;
+}

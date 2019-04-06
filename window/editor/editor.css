@@ -1,0 +1,124 @@
+body{
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	position: fixed;
+	pointer-events: none;
+}
+#flags{
+	position: fixed;
+	top: 55px;
+	left: 7px;
+}
+#flags *{
+	pointer-events: auto;
+}
+.flag{
+	width: 100px;
+	height: 50px;
+	background-size:contain !important;
+	cursor: pointer;
+	transition: all 500ms 0s ease;
+}
+.flag:hover{
+	margin-left: -10px;
+}
+.clip{
+	position: fixed;
+	width: 70px;
+	height: 105px;
+	background-size: contain !important;
+	-webkit-app-region: drag;
+}
+.clip:nth-child(1){
+ z-index: 5;
+ right: 30px;
+ /* transform: rotateZ(30deg); */
+ filter:brightness(97%);
+}
+.clip:nth-child(2){
+ z-index:  -1;
+ right: 20px;
+ /* transform: rotateZ(15deg); */
+ filter:brightness(90%);
+}
+#mainContent{
+	position: relative;
+	height: calc(100% - 20px);
+	margin-top: 20px;
+	margin-left: 70px;
+	margin-right: 10px;
+	pointer-events: none;
+}
+.tab{
+	width: calc(100% - 30px);
+	height: calc(100% - 25px);
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	pointer-events: none;
+	transition: all 300ms 0s ease;
+}
+.tab > *{
+	pointer-events: auto;
+}
+.tabHeader{
+	display: inline-block;
+	border-radius: 10px 10px 0 0;
+	font-size: 2ch;
+	padding: 5px 0 2px 2ch;
+	width: 20%;
+	cursor: pointer;
+}
+.tabClient{
+	width: calc(100% - 5px);
+	height: calc(100% - 17px - 2ch);
+	border-radius: 10px;
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.contentHead{
+	height: 50px;
+}
+.content{
+	margin-top: 10px;
+	height: calc(100% - 70px);
+	overflow: scroll;
+}
+
+.tab:nth-child(1) > div{
+	background:#d2faf0;
+}
+.tab:nth-child(1) .tabHeader{
+	margin-left:1em;
+}
+.tab:nth-child(2) > div{
+	background:#ffe6e6;
+}
+.tab:nth-child(2) .tabHeader{
+	margin-left: calc(20% + 6ch);
+}
+.tab:nth-child(3) > div{
+	background:#f0dcff;
+}
+.tab:nth-child(3) .tabHeader{
+	margin-left: calc(40% + 10ch);
+}
+#popUpFilter{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	pointer-events: none;
+	z-index: 20;
+}
+#popUpFilter .filter{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	pointer-events: auto;
+}

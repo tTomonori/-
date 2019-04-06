@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Editor</title>
+	<link rel="stylesheet" href="../../script/components/components.css">
+	<link rel="stylesheet" href="../../script/components/button.css">
+	<link rel="stylesheet" href="../../script/components/programDetails.css">
+	<link rel="stylesheet" href="../../script/components/eventDetails.css">
+	<link rel="stylesheet" href="../../script/components/planBar.css">
+	<link rel="stylesheet" href="../../script/components/alarm.css">
+	<link rel="stylesheet" href="../../script/components/alart.css">
+	<link rel="stylesheet" href="./editor.css">
+</head>
+<script>
+const renderer=require("electron").ipcRenderer
+</script>
+<body>
+	<div id="flags">
+		<div class="flag" style="background:url('../../image/myImage/xFlag.png') left top;" onclick="window.close()"></div>
+	</div>
+	<div id="clips">
+		<div class="clip" style="background:url('../../image/myImage/usagiClipB.png')"></div>
+		<div class="clip" style="background:url('../../image/myImage/usagiClipP.png')"></div>
+	</div>
+	<div id="mainContent">
+	<div id="scheduleTab" class="tab" style="z-index:3">
+		<div class="tabHeader" onclick="ScheduleTab.clicked()">Schedule</div>
+		<div class="tabClient">
+			<div class="contentHead"></div>
+			<div class="content"></div>
+	</div>
+	</div>
+	<div id="customTab" class="tab">
+		<div class="tabHeader" onclick="CustomTab.clicked()">Custom</div>
+		<div class="tabClient">
+			<div class="contentHead"></div>
+			<div class="content"></div>
+	</div>
+	</div>
+	<div id="pastTab" class="tab">
+		<div class="tabHeader" onclick="PastTab.clicked()">Past</div>
+		<div class="tabClient">
+			<div class="contentHead"></div>
+			<div class="content"></div>
+	</div>
+	</div>
+	<div id="popUpFilter"></div>
+</div>
+<iframe id="componentsFrame" src="../../script/components/components.html" style="display:none;"></iframe>
+</body>
+<!-- 予定関連 -->
+<script type="text/javascript">
+const Program=require("../../script/plan/Program.js")
+const Event=require("../../script/plan/Event.js")
+const AlarmCreater=require("../../script/alarm/AlarmCreater.js")
+</script>
+<script type="text/javascript" src="../../script/MyDate.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="../../script/getFromMain.js"></script>
+<!-- タブ関連 -->
+<script type="text/javascript" src="./tab/Tab.js"></script>
+<script type="text/javascript" src="./tab/ScheduleTab.js"></script>
+<script type="text/javascript" src="./tab/CustomTab.js"></script>
+<script type="text/javascript" src="./tab/PastTab.js"></script>
+<!-- ポップアップ -->
+<script type="text/javascript" src="../../script/popup/PopupWindow.js"></script>
+<script type="text/javascript" src="../../script/popup/PlanDetails.js"></script>
+<script type="text/javascript" src="../../script/popup/ProgramDetails.js"></script>
+<script type="text/javascript" src="../../script/popup/EventDetails.js"></script>
+<script type="text/javascript" src="../../script/popup/AlartWindow.js"></script>
+<script type="text/javascript">
+onLoad(()=>{
+	console.log("ここから始まる");
+	// document.getElementsByTagName("body")[0].appendChild(getComponent("programDetails"))
+	ScheduleTab.openTab();
+})
+</script>
+</html>

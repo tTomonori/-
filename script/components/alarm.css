@@ -1,0 +1,27 @@
+.alarmFeild{
+	width: calc(100% + 20px);
+	margin-left: -10px;
+	border:solid 3px #00f;
+	overflow-Y:scroll;
+}
+.alarmFeild::-webkit-scrollbar {
+  display: none;
+}
+.alarmBar{
+	position: relative;
+	border: solid 1px rgba(0,0,0,0.2);
+	padding: 2px;
+}
+.alarmBar *{
+	display: inline-block;
+}
+.alarmOption{
+	display: inline;
+}
+.alarmBar .textFeild{
+	font-size: 15px;
+}
+.alarmBar .garbageButton{
+	position: absolute;
+	right: 0;
+}

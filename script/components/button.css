@@ -1,0 +1,95 @@
+.usagiButton{
+	display: inline-block;
+	cursor: pointer;
+}
+.buttonX{
+	background: url('../../image/myImage/button/buttonX_up.png');
+	background-size: contain;
+}
+.buttonX::after{
+	content: "";
+	background: url('../../image/myImage/button/buttonX_hold.png');
+	background-size: contain;
+}
+.buttonX::before{
+	content: "";
+	background: url('../../image/myImage/button/buttonX_down.png');
+	background-size: contain;
+}
+.buttonX:hover{
+	background: url('../../image/myImage/button/buttonX_hold.png');
+	background-size: contain;
+}
+.buttonX:active{
+	background: url('../../image/myImage/button/buttonX_down.png');
+	background-size: contain;
+}
+.buttonO{
+	background: url('../../image/myImage/button/buttonO_up.png');
+	background-size: contain;
+}
+.buttonO::after{
+	content: "";
+	background: url('../../image/myImage/button/buttonO_hold.png');
+	background-size: contain;
+}
+.buttonO::before{
+	content: "";
+	background: url('../../image/myImage/button/buttonO_down.png');
+	background-size: contain;
+}
+.buttonO:hover{
+	background: url('../../image/myImage/button/buttonO_hold.png');
+	background-size: contain;
+}
+.buttonO:active{
+	background: url('../../image/myImage/button/buttonO_down.png');
+	background-size: contain;
+}
+.buttonG{
+	background: url('../../image/myImage/button/buttonG_up.png');
+	background-size: contain;
+}
+.buttonG::after{
+	content: "";
+	background: url('../../image/myImage/button/buttonG_hold.png');
+	background-size: contain;
+}
+.buttonG::before{
+	content: "";
+	background: url('../../image/myImage/button/buttonG_down.png');
+	background-size: contain;
+}
+.buttonG:hover{
+	background: url('../../image/myImage/button/buttonG_hold.png');
+	background-size: contain;
+}
+.buttonG:active{
+	background: url('../../image/myImage/button/buttonG_down.png');
+	background-size: contain;
+}
+
+.garbageButton{
+	display: inline-block;
+	cursor: pointer;
+	background: url('../../image/myImage/garbage.png');
+	background-size: contain;
+}
+.garbageButton::after{
+	content: "";
+	background: url('../../image/myImage/garbage_open.png');
+	background-size: contain;
+}
+/* .garbageButton::before{
+	content: "";
+	background: url('../../image/myImage/garbage.png');
+	background-size: contain;
+} */
+.garbageButton:hover{
+	background: url('../../image/myImage/garbage_open.png');
+	background-size: contain;
+}
+.garbageButton:active{
+	background: url('../../image/myImage/garbage_open.png');
+	background-size: contain;
+}
